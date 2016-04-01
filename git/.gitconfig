@@ -1,0 +1,59 @@
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[user]
+	name = julien Hautier
+	email = jhautier@allocine.fr
+[core]
+	editor = atom --wait
+[color]
+  # Use colors in Git commands that are capable of colored output when outputting to the terminal
+  ui = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[status]
+	showUntrackedFiles = all
+[alias]
+	st = status
+	ci = commit
+	cl = clone
+	br = branch
+	bd = branch -D
+	cm = !git add -A && git commit
+	co = checkout
+	cob = checkout -b
+	df = diff
+	lg = log -p
+	lol = log --graph --pretty=format:'%C(yellow)%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cblue(%cr)%Creset' --abbrev-commit --date=relative
+	lola = log --graph --pretty=format:'%C(yellow)%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cblue(%cr)%Creset' --abbrev-commit --date=relative --all
+	ls = ls-files
+	rb = "!sh -c \"git rebase -i HEAD~$1\" -"
+	r = reset
+	r1 = reset HEAD^
+	r2 = reset HEAD^^
+	rh = reset --hard
+	rh1 = reset HEAD^ --hard
+	rh2 = reset HEAD^^ --hard
+	sl = stash list
+	sa = stash apply
+	ss = stash save
+	save = !git add -A && git commit -m 'SAVEPOINT'
+	undo = reset HEAD~1 --mixed
+	wipe = !git add -A && git commit -m 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+	amend = commit -a --amend
+	branch-name = "!git rev-parse --abbrev-ref HEAD"
+	pu = "!git push --set-upstream origin $(git branch-name)"
+	fp = !git fetch && git pull origin $(git branch-name)
+
