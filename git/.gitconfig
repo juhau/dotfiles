@@ -56,4 +56,5 @@
 	branch-name = "!git rev-parse --abbrev-ref HEAD"
 	pu = "!git push --set-upstream origin $(git branch-name)"
 	fp = !git fetch && git pull origin $(git branch-name)
+	aliases = config --get-regexp alias
 
