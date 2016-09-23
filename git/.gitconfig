@@ -31,6 +31,7 @@
 	cl = clone
 	br = branch
 	bd = branch -D
+	bl = branch --list
 	cm = !git add -A && git commit
 	co = checkout
 	cob = checkout -b
