@@ -1,11 +1,17 @@
 # to put on .profile or .zshrc
 
 # Shortcuts
+alias v="vagrant"
+alias g="git"
 alias d="cd ~/Documents/"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias w="cd ~/Workspace"
 alias sb="cd ~/virtualbox-box/scotchbox"
+
+# save Atom settings
+alias atom-export="cp -r ~/.atom ~/AtomBackups/.atom"
+alias atom-import="cp -r ~/AtomBackups/.atom ~/.atom"
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
