@@ -10,8 +10,8 @@ alias w="cd ~/Workspace"
 alias sb="cd ~/virtualbox-box/scotchbox"
 
 # save Atom settings
-alias atom-export="cp -r ~/.atom ~/AtomBackups/.atom"
-alias atom-import="cp -r ~/AtomBackups/.atom ~/.atom"
+alias atom-export="cp -r ~/.atom ~/AtomBackups/atom"
+alias atom-import="cp -r ~/AtomBackups/atom ~/.atom"
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
