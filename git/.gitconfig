@@ -59,4 +59,4 @@
 	pu = "!git push --set-upstream origin $(git branch-name)"
 	fp = !git fetch && git pull origin $(git branch-name)
 	aliases = config --get-regexp alias
-	commit-per-user = git shortlog -s -n
+	commit-per-user = !git shortlog -s -n
