@@ -92,3 +92,4 @@
 	total = "!f() { git log $@ --numstat | perl -ne '$i+=$1 and $d+=$2 if /^(\\d+)\\s+(\\d+)/; END { print \"$i insertion(s), $d deletion(s)\n\"}'; }; f"
 	total-me = !git total --author=$(git config --global user.email)
 	branchfrom = !git reflog --date=local --all | grep from
+	totalcomit = !git shortlog -s --all
